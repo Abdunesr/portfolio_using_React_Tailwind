@@ -1,4 +1,5 @@
 import lightme from "../assets/images/lightme.jpg";
+import darkme from "../assets/images/darkme.jpg";
 import linkdin from "../assets/images/linkdin.png";
 import git from "../assets/images/git.png";
 import ins from "../assets/images/ins.png";
@@ -9,7 +10,7 @@ import { useEffect, useState } from "react";
 
 function Home() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center h-screen bg-white text-gray-800 p-10">
+    <div className="flex flex-col md:flex-row items-center justify-center h-screen bg-white text-gray-800 p-10 dark:bg-black dark:text-white">
       <div className="flex flex-col md:w-1/2 p-4 animate__animated animate__fadeInLeft relative group">
         <h2 className="text-3xl font-bold mb-4 animate__animated animate__fadeInDown">
           <AnimatedText />
@@ -18,7 +19,12 @@ function Home() {
           <img
             src={lightme}
             alt="Animated"
-            className="w-[300px] h-72 transition-transform duration-300 transform group-hover:translate-y-[-20px] group-hover:scale-105 group-hover:animate-oo"
+            className="block dark:hidden  w-[300px] h-72 transition-transform duration-300 transform group-hover:translate-y-[-20px] group-hover:scale-105 group-hover:animate-oo"
+          />
+          <img
+            src={darkme}
+            alt="Animated"
+            className="hidden dark:block  w-[300px] h-72 transition-transform duration-300 transform group-hover:translate-y-[-20px] group-hover:scale-105 group-hover:animate-oo"
           />
         </div>
         <div className="absolute bottom-0 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

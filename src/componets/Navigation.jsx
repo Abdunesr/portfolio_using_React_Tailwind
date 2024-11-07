@@ -1,8 +1,9 @@
-import logo from "../assets/images/logo.png";
-
+import lightlogo from "../assets/images/lightlogo.png";
+import darklogo from "../assets/images/darklogo.png";
+import ThemeToggle from "./ThemeToggle";
 function Nav() {
   return (
-    <nav className="flex justify-around mt-6 mb-0">
+    <nav className="flex justify-around mt-0 mb-0">
       <Logo />
       <ul className="flex space-x-16">
         <li>
@@ -41,6 +42,7 @@ function Nav() {
             <span className="block h-[2px] w-0 bg-black group-hover:w-full transition-all duration-300 ease-in-out"></span>
           </a>
         </li>
+        <ThemeToggle />
       </ul>
     </nav>
   );
@@ -48,8 +50,19 @@ function Nav() {
 
 function Logo() {
   return (
-    <div className="ml-0">
-      <img src={logo} alt="logo" className="w-28 h-20 " />{" "}
+    <div className="ml-0 mt-0">
+      <img
+        src={lightlogo}
+        alt="Light Mode"
+        className="block dark:hidden w-46 h-32"
+      />
+
+      {/* Dark mode image */}
+      <img
+        src={darklogo}
+        alt="Dark Mode"
+        className="hidden dark:block w-46 h-32"
+      />
       {/* Use the imported variable here */}
     </div>
   );
