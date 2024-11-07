@@ -1,6 +1,4 @@
-Here's a sample README description for your portfolio built with React:
 
----
 
 # My Portfolio
 
