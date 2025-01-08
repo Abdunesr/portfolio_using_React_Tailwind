@@ -13,6 +13,8 @@ import Services from "./componets/Myservices";
 import { motion } from "framer-motion";
 import About from "./componets/About";
 
+import AppleCardsCarouselDemo from "./componets/apple";
+
 function App() {
   return (
     <div className="mt-0 mb-0 dark:bg-black  dark:text-white">
@@ -20,6 +22,8 @@ function App() {
       <Nav />
 
       <Home />
+      <AppleCardsCarouselDemo />
+
       <Skill />
       <Services />
       <About />
@@ -102,7 +106,7 @@ function Cursor() {
 
       {/* Inner Dot */}
       <div
-        className="fixed pointer-events-none transition-transform duration-300 ease-in-out bg-black rounded-full w-2 h-2 dark:bg-white"
+        className="fixed pointer-events-none transition-transform duration-300 ease-in-out bg-green-500 rounded-full w-2 h-2 dark:bg-white"
         style={{
           left: position.x,
           top: position.y,
