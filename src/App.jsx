@@ -12,6 +12,7 @@ import Skill from "./componets/Skill";
 import Services from "./componets/Myservices";
 import { motion } from "framer-motion";
 import About from "./componets/About";
+import Testimonials from "./componets/Testimonials";
 
 import AppleCardsCarouselDemo from "./componets/apple";
 
@@ -22,7 +23,10 @@ function App() {
       <Nav />
 
       <Home />
+
       <AppleCardsCarouselDemo />
+
+      <Testimonials />
 
       <Skill />
       <Services />
