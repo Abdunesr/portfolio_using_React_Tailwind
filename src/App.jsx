@@ -13,6 +13,7 @@ import Services from "./componets/Myservices";
 import { motion } from "framer-motion";
 import About from "./componets/About";
 import Testimonials from "./componets/Testimonials";
+import reviews from "./componets/data";
 
 import AppleCardsCarouselDemo from "./componets/apple";
 
@@ -21,14 +22,16 @@ function App() {
     <div className="mt-0 mb-0 dark:bg-black  dark:text-white">
       <Cursor />
       <Nav />
-
       <Home />
-
-      <AppleCardsCarouselDemo />
-
-      <Testimonials />
-
       <Skill />
+      <div className="flex flex-col w-[100vw] h-[100vh] justify-center items-center bg-gray-200">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold">Our Testimonials</h1>
+          <div className="bg-violet-400 h-[4px] w-1/5 mt-1 mx-auto"></div>
+          <Testimonials reviews={reviews} />
+        </div>
+      </div>
+      <AppleCardsCarouselDemo />
       <Services />
       <About />
       <ContactPage />
